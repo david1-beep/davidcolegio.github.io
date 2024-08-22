@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prematricula</title>
+    <link rel="shortcut icon" href="img/logito.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/stiloprematricula.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+	
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootrap/4.2.1/js/boostrap"></script>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+             <a href="index.html">Inicio</a>
+            <a href="Prematricula (2).html">Prematricula</a>
+            <a href="Oferta Academica.html">Oferta Academica</a>
+			<a href="Servicio.html">Servicio</a>
+			<a href="Eventos.html">Eventos</a>
+			<a href="Estudiante.html">Estudiante</a>
+            <a href="Contacto/Contacto7.html">Contacto</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Instituto Polivalente Francisco Morazan</h1>
+            <h2>Educamos para transformar. Mas de cuatro decadas de contribuir a la Educacion de Honduras.</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+	<section>
+	<div class="container">
+        <h1>FORMULARIO-PREMATRICULA</h1>
+        <form action="#" method="post">
+            <!-- Información del Alumno -->
+            <fieldset>
+                <legend>Información del Alumno</legend>
+                <label for="nombre">Nombre Completo del Alumno:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+                
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                
+                <label for="telefono-alumno">Número de Teléfono del Alumno:</label>
+                <input type="tel" id="telefono-alumno" name="telefono-alumno" required>
+                
+                <label for="numero-identidad">Número de Identidad:</label>
+                <input type="text" id="numero-identidad" name="numero-identidad" required>
+                
+                <label for="lugar-nacimiento">Lugar de Nacimiento:</label>
+                <input type="text" id="lugar-nacimiento" name="lugar-nacimiento" required>
+                
+                <label for="domicilio">Domicilio Actual:</label>
+                <input type="text" id="domicilio" name="domicilio" required>
+            </fieldset>
+            
+            <!-- Información del Padre o Encargado -->
+            <fieldset>
+                <legend>Información del Padre o Encargado</legend>
+                <label for="nombre-padre">Nombre del Padre o Encargado:</label>
+                <input type="text" id="nombre-padre" name="nombre-padre" required>
+                
+                <label for="telefono-padre">Número de Teléfono del Padre:</label>
+                <input type="tel" id="telefono-padre" name="telefono-padre" required>
+                
+                <label for="numero-identidad-padre">Número de Identidad del Padre:</label>
+                <input type="text" id="numero-identidad-padre" name="numero-identidad-padre" required>
+            </fieldset>
+            
+            <!-- Selección entre Bachillerato y Módulos Técnicos -->
+            <fieldset>
+                <legend>Selección de Estudio</legend>
+                <label for="tipo-estudio">Tipo de Estudio:</label>
+                <select id="tipo-estudio" name="tipo-estudio" required onchange="toggleSections()">
+                    <option value="">Selecciona</option>
+                    <option value="bachillerato">Bachillerato</option>
+                    <option value="modulos">Módulos Técnicos</option>
+                </select>
+            </fieldset>
+            
+            <!-- Información Académica para Bachillerato -->
+            <fieldset id="bachillerato-section" class="hidden">
+                <legend>Información Académica (Bachillerato)</legend>
+                <label for="nivel">Nivel:</label>
+                <select id="nivel" name="nivel" required>
+                    <option value="">Selecciona</option>
+                    <option value="decimo">Décimo</option>
+                    <option value="undecimo">Undécimo</option>
+                    <option value="duodecimo">Duodécimo</option>
+                </select>
+                
+                <label for="jornada">Jornada:</label>
+                <select id="jornada" name="jornada" required>
+                    <option value="">Selecciona</option>
+                    <option value="matutina">Matutina</option>
+                    <option value="vespertina">Vespertina</option>
+                    <option value="nocturna">Nocturna</option>
+                </select>
+                
+                <label for="bachillerato">Bachillerato:</label>
+                <select id="bachillerato" name="bachillerato" required>
+                    <option value="">Selecciona</option>
+                    <option value="tecnico-informatica">Bachiller Técnico Profesional en Informática</option>
+                    <option value="tecnico-contaduria">Bachiller Técnico Profesional en Contaduría y Finanzas</option>
+                    <option value="tecnico-administracion">Bachiller Técnico Profesional en Administración en Empresa</option>
+                    <option value="tecnico-ciencias-humanidades">Bachiller Técnico Profesional en Ciencias y Humanidades</option>
+                    <option value="general">Bachillerato General</option>
+                </select>
+            </fieldset>
+
+            <!-- Información Académica para Módulos Técnicos -->
+<fieldset id="modulos-section" class="hidden">
+    <legend>Información Académica (Módulos Técnicos)</legend>
+    
+    <label for="nivel-modulo">Nivel:</label>
+    <select id="nivel-modulo" name="nivel-modulo" required>
+        <option value="">Selecciona</option>
+        <option value="septimo">Séptimo</option>
+        <option value="octavo">Octavo</option>
+        <option value="noveno">Noveno</option>
+    </select>
+    
+    <label for="modulo">Módulo:</label>
+    <select id="modulo" name="modulo">
+        <option value="">Selecciona</option>
+        <option value="hogar">Hogar</option>
+        <option value="agropecuaria">Agropecuaria</option>
+        <option value="madera">Madera</option>
+        <option value="estructura">Estructura</option>
+        <option value="electricidad">Electricidad</option>
+    </select>
+    
+    <label for="seccion">Sección:</label>
+    <select id="seccion" name="seccion">
+        <option value="">Selecciona</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+    
+    <label for="jornada-modulo">Jornada del Módulo:</label>
+    <select id="jornada-modulo" name="jornada-modulo">
+        <option value="">Selecciona</option>
+        <option value="matutina">Matutina</option>
+        <option value="vespertina">Vespertina</option>
+        <option value="nocturna">Nocturna</option>
+    </select>
+</fieldset>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleSections() {
+            const tipoEstudio = document.getElementById('tipo-estudio').value;
+            const bachilleratoSection = document.getElementById('bachillerato-section');
+            const modulosSection = document.getElementById('modulos-section');
+            
+            if (tipoEstudio === "bachillerato") {
+                bachilleratoSection.classList.remove('hidden');
+                modulosSection.classList.add('hidden');
+            } else if (tipoEstudio === "modulos") {
+                modulosSection.classList.remove('hidden');
+                bachilleratoSection.classList.add('hidden');
+            } else {
+                bachilleratoSection.classList.add('hidden');
+                modulosSection.classList.add('hidden');
+            }
+        }
+    </script>
+	</section>
+	
+	
+    
+				
+<footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono</h4>
+                <p>(M)matutina-94681069</p>
+				<p>(V)vespertina-95584181</p>
+				<p>(N)nocturna-99070825</p>
+				<br>
+				 <h4>Email</h4>
+				<p>ipfm2024@gmail.com</p>
+				
+	<div class="container text-center">
+	<div class="icono-social">
+	
+		</div>
+		
+	</div>
+				
+	
+	
+            </div>
+            
+			
+            <div class="content-foo">
+                <h4>Ubicacion</h4>
+	<div id="googlemap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.0638536392166!2d-87.60959382583609!3d15.318764659092949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f661eb9903863ad%3A0xe5b95887ca985100!2sInstituto%20Polivalente%20Francisco%20Morazan!5e0!3m2!1ses!2shn!4v1716921440834!5m2!1ses!2shn" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            </div>
+			
+  </div>
+	
+        <h2 class="titulo-final">&copy; IPFM | David Zeron</h2>
+    </footer>
+</body>
+
+</html>
